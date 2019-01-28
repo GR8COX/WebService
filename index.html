@@ -36,8 +36,9 @@
 						<li><a href="#one" class="active">About</a></li>
 						<li><a href="#two">Work Experience</a></li>
 						<li><a href="#three">Life</a></li>
-						<li><a href="#five">Resume/CV</a></li>
-						<li><a href="#four">Contact</a></li>
+						<li><a href="#four">Certifications</a></li>
+						<li><a href="#six">Resume/CV</a></li>
+						<li><a href="#five">Contact</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -63,10 +64,9 @@
 										<h2>Steven Cox</h2>
 										<p>About</p>
 									</header>
-									<p>Mr. Cox is a Technical Architecture Delivery Specialist at Accenture. He earned his bachelor's degree from Purdue University in Brain and Behavioral Sciences with
-										 concentration in Perception. He has architected several enterpise projects, managing and working with individuals located all around the world. Mr. Cox has extensive use of a wide variety of languages including C#, Node.js, Python and many others. He has interfaced with database
-										 management systems such as Microsoft SQL Server, MySQL, Aurora, DynamoDb, and Oracle. Mr. Cox develops scalable and maintainable solutions through software development life cycle methodologies.
-										 He approaches new challenges with enthusiasm and curiosity, constantly striving to better himself and learn more.</p>
+									<p>Mr. Cox is a Technical Architecture Delivery Specialist at Accenture. He earned his bachelor's degree from Purdue University in Brain and Behavioral Sciences with a
+										 concentration in Perception. He has architected and implemented several enterprise projects, managing and working with individuals located all around the world. Mr. Cox has extensive use of a wide variety of languages including C#, Node.js, Python and many others. He has interfaced with technology systems such as Microsoft SQL Server, MySQL, Postgres, Aurora, DynamoDb, RedShift, Athena, Salesforce, and Oracle. Mr. Cox develops scalable and maintainable solutions through software development life cycle methodologies.
+										 He approaches new challenges with enthusiasm and curiosity, constantly striving to better himself and learn more</p>
 								</div>
 							</section>
 
@@ -86,8 +86,8 @@
 													<ul class="list">
 														<li>Cloud Strategy and Adoption</li>
 														<li>AWS/Cloud Application Architecture</li>
-														<li>AWS Migration</li>
-														<li>AWS Data Lakes and Serverless Micro Services</li>
+														<li>AWS Big Data Solutions</li>
+														<li>AWS Data Lakes and Microservices Architecture</li>
 													</ul>
 												</article>
 											</div>
@@ -95,8 +95,8 @@
 												<article>
 													<ul class="list">
 														<li>Large Oncology Pharmaceutical Company</li>
-														<li>Enterprise Data Lakes with PCI, PII, HPI data sets</li>
-														<li>Data Ingestion and Transformation</li>
+														<li>Enterprise Data Lakes with PCI, PII, PHI, and HIPAA data sets</li>
+														<li>Data Ingestion, Transformation, Processing, Persistence and Visualization</li>
 													</ul>
 												</article>
 											</div>
@@ -180,8 +180,31 @@
 								</div>
 							</section>
 
-						<!-- Four -->
-							<section id="four">
+							<!-- Four -->
+							<section id ="four">
+								<div class="container">
+									<div class="slideshow-container">
+
+									<div class="mySlides fade">
+									  <img src="images/AWSCSAA.pdf" style="width:100%">
+									</div>
+
+									<div class="mySlides fade">
+									  <img src="images/AWSCSAP.pdf" style="width:100%">
+									</div>
+
+									</div>
+									<br>
+
+									<div style="text-align:center">
+									  <span class="dot"></span>
+									  <span class="dot"></span>
+									</div>
+								</div>
+							</section>
+
+						<!-- five -->
+							<section id="five">
 								<div class="container">
 									<h3>Contact Me</h3>
 									<form action="https://formspree.io/StevenDCox8@gmail.com"
@@ -245,5 +268,27 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";
+			  }
+			  slideIndex++;
+			  if (slideIndex > slides.length) {slideIndex = 1}
+			  for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  setTimeout(showSlides, 10000); // Change image every 2 seconds
+			}
+			</script>
+
 	</body>
 </html>
